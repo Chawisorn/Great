@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #BEF3D5 0%, #ffffff 100%);
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1em;
+            text-align: left;
+        }
+
+        header {
+           background: linear-gradient(to bottom right, #003300 0%, #00cc00 100%);
+           color: #D0D3D4;
+           margin-top: 0px;
+           padding: 0 5px;
+           text-align: left;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="FIBO_logo.jpg" title="Favicon"/>
+
+        <!-- <img src="FIBO_logo.jpg" alt="A black, brown, and white dog wearing a kerchief"> -->
+
+        <title>An Integrated Learning Assistant System</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    </head>
+
+    <body onload="forOnload()">
+        <div class="container">
+            <img src="FIBO_logo.jpg" width="70" height="80" style="margin-top: 10px; margin-left: 0 px">
+            <div style="font-size: 2.2em; margin-top: -70px; margin-left: 80px">
+                <b style="margin-left: 0px" >An Integrated Learning Assistant System</b>
+            </div>
+
+            <!-- <div style=" margin-top: -70px; margin-left: 80px">
+                <b style="width: 200px; height: 2.2em; overflow: hidden;" >An Integrated Learning Assistant System</b>
+            </div> -->
+
+            <br>
+            
+        </div>
+
+        <div class="container">
+            <div>
+                <h3 id="connectionStatus">Server Status:</h3>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="form-group">
+                <label for="robotSelection" id="currentRobotName">Robot Name:</label>
+                <input type="text" class="form-control" id="robotSelection" placeholder="Enter your robot name here...">
+            </div>
+            <!-- <button class="btn btn-primary" id="robotSelected">Connect</button> -->
+            <button class="btn btn-success" id="robotSelected">Connect</button>
+            
+        </div>
+        <br>
+        <div class="container">
+            <p id="leftSensor">Left Sensor:</p> 
+        </div>
+        <div class="container">
+            <p id="middleSensor">Middle Sensor:</p>
+        </div>
+        <div class="container">
+            <p id="rightSensor">Right Sensor:</p>
+        </div>
+
+        <div class="container">
+            <div class="jumbotron">
+                <h3>Input Command:</h3>
+                <form id="command">  
+                            <button style="width: 10%; margin-top: 1%; margin-left: 5%" class="btn btn-danger" id="sendCommandBtn" value="A">Kick </button>
+                            <button style="width: 10%; margin-top: 1%; margin-left: 15%" class="btn btn-primary" id="sendCommandBtn" value="F">Forword </button>
+                            <br>
+                            <button style="width: 10%; margin-top: 1%; margin-left: 20%" class="btn btn-primary" id="sendCommandBtn" value="L">Left    </button>
+                            <button style="width: 10%; margin-top: 1%; margin-left: 10%" class="btn btn-primary" id="sendCommandBtn" value="R">Right   </button>
+                            <br>
+                            <button style="width: 10%; margin-top: 1%; margin-left: 30%" class="btn btn-primary" id="sendCommandBtn" value="B">Backword</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-lg-12">
+                <h3>Command History:</h3>
+                <div id="commandHistory">
+                </div>
+                <form id="deleteHistory">
+                    <button type="submit" class="btn btn-danger">Delete History</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>@Powered by M&J</p>
+            
+        </footer>
+
+        <script src="script.js"></script>
+        <!-- <script type="commonjs" src="script.js"></script> -->
+        <!-- <script type="module" src="script.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script> -->
+        <!-- <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script> -->
+
+    </body>
+
+</html>
